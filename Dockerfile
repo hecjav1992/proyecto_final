@@ -1,9 +1,8 @@
-FROM mysql:8.0
+FROM php:8.2-apache
 
-# Variables de entorno para MySQL
-ENV MYSQL_ROOT_PASSWORD=1234
-ENV MYSQL_DATABASE=sistema_web
-EXPOSE 80 3306
-# Copia el SQL de inicialización
-COPY init.sql /docker-entrypoint-initdb.d/
+# Habilita mysqli
+RUN docker-php-ext-install mysqli
+
+# Copia tu app al contenedor
+COPY ./public /var/www/html/
 
