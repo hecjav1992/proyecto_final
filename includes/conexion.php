@@ -1,5 +1,5 @@
 <?php
-$host = "https://proyecto-final-86ts.onrender.com";
+$host = "proyecto-final-86ts.onrender.com";
 $user = "root";
 $pass = "1234";
 $db   = "sistema_web";
